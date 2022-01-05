@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import PlatList from '../components/PlatList'
 import RestaurantInfos from '../components/RestaurantInfos'
 import { getRestaurantById } from '../services/Api'
 
@@ -27,6 +28,7 @@ function Restaurant () {
   return restaurant && (
     <div>
       <RestaurantInfos restaurant={restaurant} />
+      <PlatList plats={restaurant.plats} />
     </div>
   )
 }
